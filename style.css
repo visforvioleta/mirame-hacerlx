@@ -1,0 +1,208 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #ffffff;
+  width: 100vw;
+  height: 100vh;
+  width: 100dvw;
+  height: 100dvh;
+  padding: clamp(0.75rem, 0.2283rem + 2.6087vw, 2.25rem);
+}
+
+.pirata {
+  font-family: "Pirata One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.playfar-display {
+  font-family: "Playfair Display", serif;
+}
+
+#background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  width: 100dvw;
+  height: 100dvh;
+  object-fit: cover;
+  z-index: -3;
+}
+
+div.main-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+header {
+  /*border-radius: 10px 10px 0 0;
+  border: 2px solid #a7a7a7;*/
+  height: clamp(3rem, 2.6522rem + 1.7391vw, 4rem);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0.7rem 0.05rem 0.7rem;
+  text-shadow: 1px 1px 2px #ffffff, 0 0 1em #92d3dc, 0 0 0.2em #e4f7fb;
+}
+
+h1 {
+  /*font-size: clamp(2.75rem, 2.4891rem + 1.3043vw, 3.5rem);*/
+  font-size: clamp(2.5rem, 1.2826rem + 6.087vw, 6rem);
+  background: linear-gradient(0deg, #5a5a5a 0%, #a7a7a7 50%, #8a8a8a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.logo {
+  /*height: clamp(2.5rem, 2.1522rem + 1.7391vw, 3.5rem);*/
+  height: clamp(3rem, 1.9565rem + 5.2174vw, 6rem);
+  width: auto;
+}
+
+footer {
+  /*border-radius: 0 0 10px 10px;
+  border-right: 2px solid #a7a7a7;
+  border-left: 2px solid #a7a7a7;
+  border-bottom: 2px solid #a7a7a7;
+  padding: 0 0.4rem 0.4rem 0.4rem;*/
+  text-align: center;
+  padding: 1rem;
+  /*filter: drop-shadow(2px 2px 1px #FFFFFF);*/
+  filter: drop-shadow(0 0 0.5em #92d3dc);
+}
+
+.icon {
+  /* height: 24px; Ajusta según el diseño 
+    margin: 0 5px; Espaciado lateral 
+    vertical-align: middle;*/
+
+  fill: white;
+}
+
+.icon:hover {
+  fill: #e4f7fb;
+}
+
+.icono-link {
+  text-decoration: none;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+/* estilos para main y cards  */
+
+main {
+  /*border-right: 2px solid #a7a7a7;
+  border-left: 2px solid #a7a7a7;*/
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: clamp(1rem, 0.3043rem + 3.4783vw, 3rem) 1rem 1rem 1rem;
+  gap: clamp(1.25rem, 0.3804rem + 4.3478vw, 3.75rem);
+}
+
+.group-cards {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: clamp(1.25rem, 0.3804rem + 4.3478vw, 3.75rem);
+}
+
+.card-link {
+  text-decoration: none;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 0px solid #a7a7a7;
+  border-radius: 10px;
+  width: 350px;
+  text-align: center;
+  overflow: hidden;
+  box-shadow: 2px 4px 6px #00000050;
+  /*filter: blur(0.15rem);*/
+  transition: all 0.5s ease-out;
+
+  @media only screen and (max-width: 834px) {
+    width: auto;
+  }
+
+  /*@media only screen and (max-width: 480px) {
+    width: 7rem;
+  }*/
+}
+
+.card:hover {
+  filter: blur(0);
+  transform: translateY(0.35rem);
+  background: #ffffff65;
+}
+
+.bg-suerte {
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #bfc1d4 0%,
+    rgba(191, 193, 212, 0.5) 65%
+  );
+}
+
+.bg-ciclika {
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #f0ade6 0%,
+    rgba(240, 173, 230, 0.5) 65%
+  );
+}
+
+.bg-cortecito {
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #2cff05 0%,
+    rgba(44, 255, 5, 0.5) 65%
+  );
+}
+
+.bg-fetuccini {
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #f5eebf 0%,
+    rgba(245, 238, 191, 0.5) 65%
+  );
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  filter: blur(0.15rem) saturate(0.75);
+  transition: all 0.5s ease-out;
+}
+
+.card img:hover {
+  filter: blur(0) saturate(1);
+}
+
+.card-name {
+  background: linear-gradient(180deg, #d9d9d9 0%, #737373 100%);
+  color: #ffffff;
+  padding: 10px;
+  font-family: "Pirata One", serif;
+  font-size: clamp(0.9rem, 0.587rem + 1.5652vw, 1.8rem);
+  text-shadow: 1px 1px 2px black, 0 0 1em #92d3dc, 0 0 0.2em #e4f7fb;
+}
