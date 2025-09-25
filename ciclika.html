@@ -1,101 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="icon"
-      href="./assets/logo_favicon-32x32.png"
-    />
-    <title>CICLIKA 🔥 MÍRAME HACERLX</title>
-    <!-- importacion de css y fuentes -->
-    <link rel="stylesheet" href="./ciclika.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Pirata+One&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
-      rel="stylesheet"
-    />
-    <!-- importacion de hydra y js -->
-    <script src="/script.js" defer></script>
-    <!-- Importacion de componente modelviewer -->
-    <script
-      type="module"
-      src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"
-    ></script>
-  </head>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CICLIKA 🔥 MÍRAME HACERLX</title>
+  <!-- Importación de CSS y fuentes -->
+  <link rel="icon" href="./assets/logo_favicon-32x32.png" />
+  <link rel="stylesheet" href="./ciclika.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pirata+One&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
+  <!-- Importación de hydra y JS -->
+  <script src="/script.js" defer></script>
+  <!-- Importación de componente model-viewer -->
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+</head>
+<body>
+  <video id="background-video" autoplay muted loop>
+    <source src="./assets/fuego_hydra.mp4" type="video/mp4" />
+    Tu navegador no soporta la reproducción de videos.
+  </video>
+  <main>
+    <section class="container-background">
+      <header class="pirata">
+        <h1>CICLIKA</h1>
+      </header>
 
-  <body>
-    <video id="background-video" autoplay muted loop>
-      <source
-        src="./assets/fuego_hydra.mp4"
-        type="video/mp4"
-      />
-      Tu navegador no soporta la reproducción de videos.
-    </video>
-    <main>
-      <section class="container-background">
-        <header class="pirata">
-          <h1>CICLIKA</h1>
-
-        </header>
-
-        <section class="main">
-          <!--empty or whatever you want-->
-        </section>
-        <footer class="playfar-display">
-          <section class="marquee-container">
-            <p class="marquee-text"> MÍRAME HACERLX • </p>
-            <p class="marquee-text"> @LALOLA.MUSICA • </p>
-            <p class="marquee-text"> MÍRAME HACERLX • </p>
-            <p class="marquee-text"> @LALOLA.MUSICA • </p>
-            <p class="marquee-text"> MÍRAME HACERLX • </p>
-            <p class="marquee-text"> @LALOLA.MUSICA • </p>
-            <p class="marquee-text"> MÍRAME HACERLX • </p>
-            <p class="marquee-text"> @LALOLA.MUSICA • </p>
-            <p class="marquee-text"> MÍRAME HACERLX • </p>
-            <p class="marquee-text"> @LALOLA.MUSICA • </p>
-          </section>
-        </footer>
+      <section class="main">
+        <!-- Puedes agregar contenido aquí -->
       </section>
 
-      <model-viewer
-        alt="Amuleto CICLIKA"
-        src="./assets/ciclika_rojo.gltf"
-        ar
-        poster="./assets/cover-wait.png"
-        shadow-intensity="1"
-        auto-rotate
-        camera-controls
-        touch-action="pan-y"
-        camera-orbit="-36.04deg 104deg 2.297m"
-        field-of-view="30deg"
-      >
-        <button slot="ar-button" id="ar-button">VER EN AR</button>
-        
-                <div class="buttons">
-          <a href="13-suerte.html" class="button2">🔮</a>
-          <a href="cortecito-turing.html" class="button1">🍏</a>
-          <a href="fetuccini.html" class="button3">🍝</a>
-        </div>
+      <footer class="playfar-display">
+        <section class="marquee-container">
+          <p class="marquee-text">MÍRAME HACERLX •</p>
+          <p class="marquee-text">@LALOLA.MUSICA •</p>
+          <p class="marquee-text">MÍRAME HACERLX •</p>
+          <p class="marquee-text">@LALOLA.MUSICA •</p>
+          <p class="marquee-text">MÍRAME HACERLX •</p>
+          <p class="marquee-text">@LALOLA.MUSICA •</p>
+          <p class="marquee-text">MÍRAME HACERLX •</p>
+          <p class="marquee-text">@LALOLA.MUSICA •</p>
+          <p class="marquee-text">MÍRAME HACERLX •</p>
+          <p class="marquee-text">@LALOLA.MUSICA •</p>
+        </section>
+      </footer>
+    </section>
 
-        <audio controls class="player">
-          <source
-            src="./assets/CICLIKA.wav"
-            type="audio/mpeg"
-          />
-        </audio>
-        
-               <a href="index.html">
-            <img
-              class="logo"
-              alt="Logo LA LOLA"
-              src="./assets/logo_ciclika.png"
-            />
-          </a>
-        
-        
-      </model-viewer>
-    </main>
-  </body>
+    <model-viewer
+      alt="Amuleto CICLIKA"
+      src="./assets/ciclika_rojo.gltf"
+      ar
+      poster="./assets/cover-wait.png"
+      shadow-intensity="1"
+      auto-rotate
+      camera-controls
+      touch-action="pan-y"
+      camera-orbit="-36.04deg 104deg 2.297m"
+      field-of-view="30deg"
+    >
+      <button slot="ar-button" id="ar-button">VER EN AR</button>
+      <div class="buttons">
+        <a href="13-suerte.html" class="button2">🔮</a>
+        <a href="cortecito-turing.html" class="button1">🍏</a>
+        <a href="fetuccini.html" class="button3">🍝</a>
+      </div>
+      <audio controls class="player">
+        <source src="./assets/CICLIKA.wav" type="audio/mpeg" />
+      </audio>
+      <a href="index.html">
+        <img class="logo" alt="Logo LA LOLA" src="./assets/logo_ciclika.png" />
+      </a>
+    </model-viewer>
+  </main>
+</body>
 </html>
