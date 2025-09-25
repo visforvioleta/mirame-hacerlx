@@ -1,0 +1,261 @@
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: content-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    color: #2CFF05;
+  }
+  
+  .pirata {
+    font-family: "Pirata One", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .playfar-display {
+    font-family: "Playfair Display", serif;
+  }
+  
+  /* images and videos max out at full width */
+  img,
+  video {
+    height: auto;
+    max-width: 100%;
+  }
+  
+  model-viewer {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  main {
+  background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.50) 75%, #000 100%);
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  section.container-background {
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+  
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  header {
+    margin-top: clamp(0.75rem, 0.2283rem + 2.6087vw, 2.25rem);
+    border-radius: 10px 10px 0 0;
+    border: 2px solid #2CFF05;
+    height: clamp(3rem, 2.6522rem + 1.7391vw, 4rem);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.05rem 0.7rem;
+  }
+  
+  h1 {
+    font-size: clamp(2.75rem, 2.4891rem + 1.3043vw, 3.5rem);
+  }
+
+.logo-link {
+  position: absolute;
+  z-index: 10; /* Asegura que esté encima del model-viewer */
+  align-items: flex-end; /* Alinea al final horizontal (derecha) */
+}
+
+.logo {
+  margin-top: clamp(0.75rem, 0.2283rem + 2.6087vw, 2.25rem);
+  position: absolute;
+  display: flex;
+  align-items: flex-end; /* Alinea al final horizontal (derecha) */
+  top: 0.5rem;
+  right: clamp(1.2rem, 0.313rem + 4.4348vw, 3.75rem);
+  height: clamp(2.5rem, 2.1522rem + 1.7391vw, 3.5rem);
+  width: auto;
+  cursor: pointer; /* Indica que es un enlace */
+  transition: all 0.5s ease-out;
+}
+
+.logo:hover{
+  filter: drop-shadow(0 0 0.5em #FFFFFF);
+}
+
+  
+  section.main {
+    border-right: 2px solid #2CFF05;
+    border-left: 2px solid #2CFF05;
+    flex-grow: 1;
+  }
+  
+  footer {
+    margin-bottom: clamp(0.75rem, 0.2283rem + 2.6087vw, 2.25rem);
+    border-radius: 0 0 10px 10px;
+    border-right: 2px solid #2CFF05;
+    border-left: 2px solid #2CFF05;
+    border-bottom: 2px solid #2CFF05;
+    padding: 0 0.4rem 0.4rem 0.4rem;
+  }
+  
+  footer > section.marquee-container {
+    display: flex;
+    width: 100%;
+    height: clamp(1.375rem, 1.288rem + 0.4348vw, 1.625rem);
+    overflow: hidden;
+    height: fit-content;
+  }
+  
+  .marquee-text {
+    font-size: clamp(1.125rem, 0.9076rem + 1.087vw, 1.75rem);
+    padding-right: 0.35rem;
+    text-align: left;
+    white-space: nowrap;
+    animation: marquee 15s infinite linear;
+  }
+  
+  @keyframes marquee {
+    0% {
+      -moz-transform: translateX(0%);
+      -webkit-transform: translateX(0%);
+      transform: translateX(0%);
+    }
+    100% {
+      -moz-transform: translateX(-200%);
+      -webkit-transform: translateX(-200%);
+      transform: translateX(-200%);
+    }
+  }
+  
+  #ar-button {
+    font-family: "Playfair Display", serif;
+    font-weight: 750;
+    position: absolute;
+    top: 4.65rem;
+    left: 1rem;
+    background-color: #00000015;
+    padding: 0.5rem 1rem;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border: 2px solid #2CFF05;
+    border-radius: 5rem;
+    text-shadow: 1px 1px 2px #2CFF05, 0 0 1em #2CFF05, 0 0 0.2em #2CFF05;
+  }
+  
+  .player {
+    position: absolute;
+    top: clamp(38.75rem, 34.0761rem + 23.3696vw, 52.1875rem);
+    left: clamp(1.0938rem, 0.1698rem + 4.6196vw, 3.75rem);
+    cursor: pointer;
+    filter: opacity(35%);
+    width: clamp(7.125rem, 16.3913rem + -11.9565vw, 14rem);
+    height: 2rem;
+  }
+  
+  #background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -3;
+  }
+
+.buttons {
+  position: absolute;
+  display: flex;
+  flex-direction: column; /* Botones en columna */
+  align-items: flex-end; /* Alinea al final horizontal (derecha) */
+  justify-content: flex-end; /* Alinea al final vertical (abajo) */
+  bottom: clamp(5.5rem, 7.1848rem + -2.1739vw, 6.75rem);
+  right: clamp(1.2rem, 0.313rem + 4.4348vw, 3.75rem);
+  gap: 0.5rem; /* Espaciado entre los botones */
+filter: opacity(85%);
+}
+
+
+
+
+.button2 {
+  display: flex; /* Usar flexbox para centrar el emoji */
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  width: 2.25rem; /* Altura y ancho iguales para formar un círculo */
+  height: 2.25rem;
+  color: white;
+  border-radius: 50%; /* Hace el botón circular */
+  font-size: 1.25rem; /* Tamaño del emoji */
+  cursor: pointer;
+  /*border: 2px solid #ffffff;*/
+  border-radius: 16.0625rem;
+background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.25) 50%, #454A79 100%);
+  box-shadow: 0 2.5px 5px rgba(0, 0, 0, 0.25);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button2:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.button3 {
+  display: flex; /* Usar flexbox para centrar el emoji */
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  width: 2.25rem; /* Altura y ancho iguales para formar un círculo */
+  height: 2.25rem;
+  color: white;
+  border-radius: 50%; /* Hace el botón circular */
+  font-size: 1.25rem; /* Tamaño del emoji */
+  cursor: pointer;
+  /*border: 2px solid #ffffff;*/
+background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.25) 50%, #F5EEBF 100%);
+  box-shadow: 0 2.5px 5px rgba(0, 0, 0, 0.25);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button3:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.button4 {
+  display: flex; /* Usar flexbox para centrar el emoji */
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  width: 2.25rem; /* Altura y ancho iguales para formar un círculo */
+  height: 2.25rem;
+  color: white;
+  border-radius: 50%; /* Hace el botón circular */
+  font-size: 1.25rem; /* Tamaño del emoji */
+  cursor: pointer;
+  /*border: 2px solid #ffffff;*/
+  background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.25) 50%, #F0ADE6 100%);
+  box-shadow: 0 2.5px 5px rgba(0, 0, 0, 0.25);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button4:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
